@@ -1,4 +1,4 @@
-package com.beerpongbeer.Spring.Initializr.Demo;
+package com.beerpongbeer.Demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,5 +9,4 @@ public class BeerPongBeerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BeerPongBeerApplication.class, args);
 	}
-
 }

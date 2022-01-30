@@ -1,4 +1,4 @@
-databaseChangelog:
-  -include:
-    file: 001-create-schema.sql
-    relativeToChangelogFile: true
+databaseChangeLog:
+  - include:
+      file: 001-create-schema.sql
+      relativeToChangelogFile: true

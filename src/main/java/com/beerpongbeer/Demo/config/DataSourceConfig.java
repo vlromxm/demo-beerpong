@@ -18,6 +18,8 @@ public class DataSourceConfig {
     @Value("${JDBC_DATABASE_USERNAME}")
     private String username;
 
+
+
     @Bean("dataSource")
     public DataSource dataSource() {
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();

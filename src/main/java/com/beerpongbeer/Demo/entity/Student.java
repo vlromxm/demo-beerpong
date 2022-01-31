@@ -1,12 +1,14 @@
 package com.beerpongbeer.Demo.entity;
+
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+
 @Getter
 @Setter
 @Entity
-@Table(name="Student", schema = "demo")
+@Table(name = "student", schema = "demo")
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,6 +20,9 @@ public class Student {
     @Column(name = "email")
     private String email;
 
-    public Student(){};
+    public Student() {
+    }
+
+    ;
 
 }

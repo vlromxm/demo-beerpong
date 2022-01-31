@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class BeerPongBeerApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(BeerPongBeerApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(BeerPongBeerApplication.class, args);
+    }
 }

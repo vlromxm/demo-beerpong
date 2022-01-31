@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
 import java.util.Random;
 
 @RestController
@@ -16,7 +15,7 @@ public class ControllerRandomStudent {
     StudentRepository studentRepository;
 
     @GetMapping("/create-random-student")
-    public void randomStudent() {
+    public Student randomStudent() {
       String [] names = {"Vladyslav","Rostyslav","Vitalii","Tatiana","Lyudmila"};
         String [] emails = {"student1@gmail.com","student3@mail.ru","student2@gmail.com","userstudent@bigmir.net","stuuser@gmail.com"};
         Random randomstudents = new Random();
@@ -27,6 +26,6 @@ public class ControllerRandomStudent {
         Student student = new Student();
         student.setName(name);
         student.setEmail(email);
-        studentRepository.save(student);
+       return studentRepository.save(student);
     }
 }

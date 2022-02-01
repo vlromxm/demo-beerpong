@@ -16,8 +16,8 @@ public class ControllerRandomStudent {
 
     @GetMapping("/create-random-student")
     public Student randomStudent() {
-      String [] names = {"Vladyslav","Rostyslav","Vitalii","Tatiana","Lyudmila"};
-        String [] emails = {"student1@gmail.com","student3@mail.ru","student2@gmail.com","userstudent@bigmir.net","stuuser@gmail.com"};
+        String[] names = {"Vladyslav", "Rostyslav", "Vitalii", "Tatiana", "Lyudmila"};
+        String[] emails = {"student1@gmail.com", "student3@mail.ru", "student2@gmail.com", "userstudent@bigmir.net", "stuuser@gmail.com"};
         Random randomstudents = new Random();
         int randomName = randomstudents.nextInt(names.length);
         int randomEmail = randomstudents.nextInt(emails.length);
@@ -26,6 +26,6 @@ public class ControllerRandomStudent {
         Student student = new Student();
         student.setName(name);
         student.setEmail(email);
-       return studentRepository.save(student);
+        return studentRepository.save(student);
     }
 }

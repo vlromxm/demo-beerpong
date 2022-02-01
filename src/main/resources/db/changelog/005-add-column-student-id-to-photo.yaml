@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: add column student_id to photo
+      author: vl-rom
+      changes:
+        - addColumn:
+            schemaName: demo
+            tableName: photo
+            columns:
+              - column:
+                  name: student_id
+                  type: bigint
+
+        - addForeignKeyConstraint:
+            baseColumnNames: student_id
+            baseTableName: photo
+            baseTableSchemaName: demo
+            constraintName: fk_student_to_photo
+            referencedColumnNames: id
+            referencedTableName: photo
+            referencedTableSchemaName: demo

@@ -18,9 +18,10 @@ public class ControllerAddPhotoToAlbum {
     @Autowired
     PhotoRepository photoRepository;
 
-    public void addPhotoToAlbum(String url, long id) {
+    public void addPhotoToAlbum(String url,long id ) {
         Photo photo = new Photo();
         Student student = new Student();
+        student.setId(id);
         photo.setUrl(url);
         photo.setStudent(student);
         photoRepository.save(photo);

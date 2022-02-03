@@ -17,5 +17,5 @@ databaseChangeLog:
             baseTableSchemaName: demo
             constraintName: fk_student_to_photo
             referencedColumnNames: id
-            referencedTableName: photo
+            referencedTableName: student
             referencedTableSchemaName: demo

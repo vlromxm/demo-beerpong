@@ -22,5 +22,7 @@ jobs:
     needs: [install_jdk]
     
     steps:
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml install
     - name: Maven Package
       run: mvn -B clean package -DskipTests

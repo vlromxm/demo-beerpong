@@ -16,4 +16,4 @@ jobs:
     
     steps:
     - name: Maven Package
-      run: mvn -B clean package -DskipTests
+      run: mvn -B clean package -demo-beerpong

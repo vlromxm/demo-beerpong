@@ -16,7 +16,8 @@ import java.util.Optional;
 public class ControllerAddPhotoToAlbum {
     @GetMapping("/add-photo-to-album")
     public String addPhotoToAlbum() {
-        addPhotoToAlbum("https://mimigram.ru/wp-content/themes/massive-dynamic/assets/img/Exitsite.jpg", 17);
+        addPhotoToAlbum("https://mimigram.ru/wp-content/themes/massive-d" +
+                "ynamic/assets/img/Exitsite.jpg", 1);
         return "Photo added";
     }
 
@@ -26,7 +27,6 @@ public class ControllerAddPhotoToAlbum {
 
     public void addPhotoToAlbum(String url, long id) {
         Optional<Student> student = studentRepository.findById(id);
-
         student.map(st -> {
                     Photo photo = new Photo();
                     photo.setUrl(url);

@@ -16,4 +16,4 @@ jobs:
     
     steps:
     - name: Maven Package
-      run: mvn -B clean 
+      run: mvn -B package --file pom.xml
